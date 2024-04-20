@@ -25,9 +25,7 @@ const { name } = require('ejs');
 const db_url = process.env.NODE_ENV !== 'production' ? 'mongodb://localhost:27017/yelp-camp' : process.env.DB_URL;
 mongoose.connect(db_url, {
     useNewUrlParser: true,
-    useCreateIndex: true,
-    useUnifiedTopology: true,
-    useFindAndModify: false
+    useUnifiedTopology: true
 });
 
 const db = mongoose.connection;
